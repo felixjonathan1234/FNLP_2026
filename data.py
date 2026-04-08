@@ -63,4 +63,18 @@ def load_data():
     add("Audio-Technica ATH-M50x", "headphones", 14000, "professional bass studio wired")
     add("Marshall Major IV", "headphones", 10999, "battery vintage bass classic")
 
+    # ------------------
+    # TABLETS
+    # ------------------
+    add("Apple iPad 9th Gen", "tablet", 29900, "office student battery")
+    add("Apple iPad Air 5", "tablet", 54900, "performance office creative")
+    add("Apple iPad Pro 11", "tablet", 79900, "performance gaming creative premium")
+    add("Samsung Galaxy Tab A8", "tablet", 14999, "battery student budget")
+    add("Samsung Galaxy Tab S9", "tablet", 72999, "performance gaming office premium")
+    add("Samsung Galaxy Tab S9 Ultra", "tablet", 119999, "performance gaming creative massive premium")
+    add("Lenovo Tab M10", "tablet", 11000, "battery student budget")
+    add("Lenovo Tab P11 Pro", "tablet", 39999, "performance office battery")
+    add("Xiaomi Pad 6", "tablet", 26999, "gaming performance office")
+    add("OnePlus Pad", "tablet", 37999, "gaming performance premium")
+
     return pd.DataFrame(data)

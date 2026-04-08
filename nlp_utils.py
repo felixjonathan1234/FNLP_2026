@@ -6,7 +6,7 @@ def extract_budget(text):
 
 
 def extract_category(text):
-    categories = ["headphones", "laptop", "phone"]
+    categories = ["headphones", "laptop", "phone", "tablet"]
     for cat in categories:
         if cat in text:
             return cat
