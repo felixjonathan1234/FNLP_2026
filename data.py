@@ -12,6 +12,10 @@ def load_data():
     # ------------------
     # PHONES
     # ------------------
+    add("Poco C50", "phone", 6500, "battery")
+    add("Moto e13", "phone", 7000, "battery slim")
+    add("Realme C30", "phone", 8000, "battery basic")
+    add("Samsung Galaxy M04", "phone", 9000, "battery reliable")
     add("Redmi Note 12", "phone", 12000, "camera battery")
     add("Realme Narzo 50", "phone", 14000, "gaming performance")
     add("Samsung Galaxy M13", "phone", 13000, "battery")
