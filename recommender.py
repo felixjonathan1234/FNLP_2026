@@ -1,4 +1,4 @@
-def recommend_products(df, category, budget, features):
+def recommend_products(df, category, budget, features, brand=None):
     results = df.copy()
 
     if category:
@@ -6,6 +6,9 @@ def recommend_products(df, category, budget, features):
 
     if budget:
         results = results[results["price"] <= budget]
+
+    if brand:
+        results = results[results["name"].str.lower().str.contains(brand.lower())]
 
     if features:
         results = results[

@@ -1,6 +1,6 @@
 import streamlit as st
 from data import load_data
-from nlp_utils import extract_budget, extract_category, extract_features
+from nlp_utils import extract_budget, extract_category, extract_features, extract_brand
 from recommender import recommend_products
 from styles import load_css
 
@@ -33,11 +33,12 @@ if st.button("Send") and user_input:
     category = extract_category(text)
     budget = extract_budget(text)
     features = extract_features(text)
+    brand = extract_brand(text)
 
-    results = recommend_products(df, category, budget, features)
+    results = recommend_products(df, category, budget, features, brand)
 
-    if not category:
-        st.session_state.chat.append(("bot", "⚠️ Please specify category (phone/laptop/headphones)."))
+    if not category and not brand:
+        st.session_state.chat.append(("bot", "⚠️ Please specify a category or brand."))
 
     elif results.empty:
         st.session_state.chat.append(("bot", "❌ No products found."))
